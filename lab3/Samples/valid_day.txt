@@ -1,0 +1,52 @@
+%{
+#include<stdio.h>
+int month = 0;
+int day = 0;
+int year = 0;
+int i,invalid;
+void split();
+void validate(int,int,int);
+int check_leap_year(int);
+int leap_year;
+%}
+%%
+([0-1][0-9])\/([0-3][0-9])\/([0-9][0-9][0-9][0-9]) { split(); }
+.* {printf("Invalid date\n"); }
+%%
+int main(int argc, char *argv[])
+{
+	yylex();
+}
+void split()
+{
+	month = atoi(strtok(yytext,"/"));
+	day = atoi(strtok(NULL,"/"));
+	year = atoi(strtok(NULL,"/"));
+	invalid = 0;
+	if (month > 12)
+		invalid = 1;
+	validate(month,day,year); 
+}
+void validate(int month,int day,int year)
+{
+	if((month== 1 || month== 3 || month == 5 || month == 7 || month == 8 || month ==10 || month == 12) && (day>31))
+                invalid = 1;
+
+	if((month == 4 || month == 6|| month == 9 || month == 11) && (day>30))
+		invalid = 1;
+	leap_year = check_leap_year(year);
+	printf("Leap year=%d\n",leap_year);
+	if((month == 2) && (leap_year==1) && (day > 29))
+		{printf("hi\n"); invalid = 1;}
+        if((month == 2) && (leap_year==0) && (day>28))
+        	{printf("bye\n"); invalid = 1;}
+	
+	if (invalid ==1)
+		printf("Invalid date\n");
+	else 
+		printf("Valid date. The British convention is %d/%d/%d\n",day,month,year);
+}
+int check_leap_year(int year)
+{
+	return ((year%400 == 0) || ((year%4 == 0) && (year%100 != 0)));
+}
