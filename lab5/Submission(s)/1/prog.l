@@ -14,5 +14,5 @@ number {digit}+
 "/" { return DIV; }
 ";" { return SEMICOLON; }
 {number} { yylval = atoi(yytext); return NUMBER; }
-.* { printf("yylex:error : %s\n", yytext); }
+. { printf("yylex:error : %s\n", yytext); }
 %%
