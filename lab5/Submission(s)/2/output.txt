@@ -1,0 +1,22 @@
+yylex:error : 1;
+
+yylex:error : 10;
+
+yylex:error : 0;
+
+yylex:error : 101010;
+
+yylex:error : 0011110;
+
+yylex:error : 101011;
+
+yylex:error : 1001;
+
+yylex:error : 110;
+
+yylex:error : 100;
+
+yylex:error : 9871;
+
+yylex:error : 9;
+

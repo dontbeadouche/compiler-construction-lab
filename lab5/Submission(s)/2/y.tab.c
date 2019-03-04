@@ -401,7 +401,7 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,     8,     8,    13,    14,    18,    23,    28,    32
+       0,     8,     8,    14,    15,    19,    24,    29,    33
 };
 #endif
 
@@ -1305,28 +1305,29 @@ yyreduce:
     {	
 			printf("accepted\n");
 			printf("Count_0 = %d, Count_1 = %d\n", count_0, count_1);
+			count_0 = count_1 = 0;
 		}
     break;
 
   case 3:
-#line 13 "prog.y"
+#line 14 "prog.y"
     {}
     break;
 
   case 4:
-#line 15 "prog.y"
+#line 16 "prog.y"
     { count_0 = count_1 = 0; }
     break;
 
   case 5:
-#line 19 "prog.y"
+#line 20 "prog.y"
     {
 		count_1++;
 	}
     break;
 
   case 6:
-#line 24 "prog.y"
+#line 25 "prog.y"
     {
 		count_0++;
 		
@@ -1334,14 +1335,14 @@ yyreduce:
     break;
 
   case 7:
-#line 29 "prog.y"
+#line 30 "prog.y"
     { 
 		count_0++;
 	}
     break;
 
   case 8:
-#line 33 "prog.y"
+#line 34 "prog.y"
     {	
 		count_1++; 
 		
@@ -1350,7 +1351,7 @@ yyreduce:
 
 
 /* Line 1267 of yacc.c.  */
-#line 1354 "y.tab.c"
+#line 1355 "y.tab.c"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
@@ -1564,7 +1565,7 @@ yyreturn:
 }
 
 
-#line 38 "prog.y"
+#line 39 "prog.y"
 
 int yyerror(char *msg){
 	printf("error in input %s\n", msg);

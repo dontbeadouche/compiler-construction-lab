@@ -9,6 +9,7 @@ lines : lines S SEMICOLON
 		{	
 			printf("accepted\n");
 			printf("Count_0 = %d, Count_1 = %d\n", count_0, count_1);
+			count_0 = count_1 = 0;
 		}
 		| /*epsilon*/ {}
 		| lines error SEMICOLON 
