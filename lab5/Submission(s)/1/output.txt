@@ -1,0 +1,3 @@
+The prefix expression result = 21
+The prefix expression result = 8
+The prefix expression result = 25
