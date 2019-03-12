@@ -39,7 +39,7 @@ class SymbolTable
 				value += (int)temp;
 			}
 			else if(Character.isDigit(temp)){
-				value += 2*temp;
+				value += 2*(int)temp;
 			}
 			else{
 				System.out.println("Error in input : " + id);
