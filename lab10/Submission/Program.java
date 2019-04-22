@@ -17,7 +17,7 @@ public class	Program
 				System.	out.	println(".comm d,4");
 				System.	out.	println(".comm e,4");
 				System.	out.	println(".comm f,4");
-
+        System. out.  println(".comm z,4");
 				System.	out.	println("\nmain:");
 				System.	out.	println("pushl %ebp");
 				System.	out.	println("movl %esp, %ebp");
