@@ -1,12 +1,12 @@
-import java.	util.*;
-import java.	io.*;
+import java.util.*;
+import java.io.*;
 public class	Program
 {
 	public static void main(String[] args) throws Exception
 	{
-		Scanner		sc = new Scanner(System.in);
+		    Scanner	sc = new Scanner(System.in);
 
-		String		input = "";
+		    String input = "";
 
 				System.	out.	println(".global main");
 				System.	out.	println("msg:");
@@ -17,7 +17,7 @@ public class	Program
 				System.	out.	println(".comm d,4");
 				System.	out.	println(".comm e,4");
 				System.	out.	println(".comm f,4");
-        
+
 				System.	out.	println("\nmain:");
 				System.	out.	println("pushl %ebp");
 				System.	out.	println("movl %esp, %ebp");
